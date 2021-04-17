@@ -3,8 +3,7 @@ language: go
 os:
   - linux
   - osx
-  allow_failures:
-    - windows
+  - windows
 
 arch:
   - amd64
