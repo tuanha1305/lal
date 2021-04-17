@@ -1,6 +1,7 @@
 language: go
 
 os:
+  - linux
   - windows
 
 arch:
