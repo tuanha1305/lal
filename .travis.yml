@@ -3,10 +3,7 @@ language: go
 os:
   - linux
   - osx
-
-env:
-    - GIMME_OS=linux GIMME_ARCH=amd64 GOOS=linux GOARCH=amd64
-    - GIMME_OS=darwin GIMME_ARCH=amd64 GOOS=darwin GOARCH=amd64
+  - windows
 
 go:
   - 1.13.x
