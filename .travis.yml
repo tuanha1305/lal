@@ -1,23 +1,17 @@
 language: go
 
 os:
-  - linux
-  - osx
   - windows
 
 arch:
   - amd64
-  - arm64
-  - ppc64le
-  - s390x
 
 go:
-  - 1.13.x
   - master
 
 script:
   - if [ "$TRAVIS_OS_NAME" != "windows" ]; then make all ; fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then ./build_windows.sh ; fi
+  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then ./build.sh ; fi
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
