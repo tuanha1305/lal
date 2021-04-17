@@ -11,8 +11,7 @@ go:
   - master
 
 script:
-  - if [ "$TRAVIS_OS_NAME" != "windows" ]; then make all ; fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then ./build.sh && ./test.sh ; fi
+  - ./build.sh && ./test.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
